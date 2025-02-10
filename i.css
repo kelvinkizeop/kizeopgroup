@@ -418,7 +418,7 @@ body {
 
 .reviews-head-text{
     display: flex;
-    padding-left: 20%;
+    padding-left: 7%;
     font-size: 3rem;
     margin: 0px;
     margin-bottom: -8rem;
@@ -508,7 +508,7 @@ color: #fff;
     left: 40px;
 }
 
-  @media (min-width: 921px)and  (max-width: 1200px){
+  @media (min-width: 921px)and  (max-width: 1300px){
     .site-name{
         font-size: 2.5rem;
         top: -1rem;
