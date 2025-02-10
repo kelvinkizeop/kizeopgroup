@@ -17,6 +17,10 @@ html, body{
 *,*::before,*::after {
     box-sizing: border-box;
 }
+body {
+    background: url('img/b1.png') no-repeat center center fixed;
+    background-size: cover;
+  }
 .header{
     background: linear-gradient(to left, #32404D ,white );
     display: flex;
@@ -50,7 +54,7 @@ html, body{
     position: absolute;
     bottom: -2rem;
     top: 0.5rem; 
-    color:  #32404D;
+    color:  #fff;
     display: none;
     right: 1rem;
     cursor: pointer;
@@ -164,7 +168,7 @@ html, body{
 }
 
 .sidebar-submenu li {
-    padding: 0px;
+    padding: 10px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -358,12 +362,163 @@ html, body{
     background: #f5f5f5; 
 }
 
+.Manage-flexible-plans{
+    display: grid; 
+    grid-template-columns: repeat(2, minmax(300px, 1fr)); 
+    gap: 30px;
+    padding: 40px;
+   
+    
+
+}
+.Manage-flexible-plans div:nth-child(1){
+    background-color: #32404D;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+.Manage-flexible-plans div:nth-child(2){
+    background-color: #6E4E37;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+.Manage-flexible-plans  div h2{
+    font-size: 2rem;
+    letter-spacing: 2px
+
+}
+.learn-more-btn2{
+    display: inline-block;
+    background-color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.learn-more-btn1{
+    display: inline-block;
+    background-color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.Manage-flexible-plans div{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
 
+.reviews-head-text{
+    display: flex;
+    position: absolute;
+    left: 10rem;
+    font-size: 4rem;
+     
+}
+.learn-more-btn3{
+    display: flex;
+    position: absolute;
+    left: 30rem;
+    font-size: 1.5rem;
+    bottom: 40px;
+    display: inline-block;
+    background-color:#32404D;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    
+   
+}
+.customer-reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 20px 0;
+    margin-top: 10%;
+}
 
 
+.reviews-section{
+    background-color:#32404D;
+    color: white;
+    padding: 20px;
+    margin: 130px;
+    border: 5px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 100%; 
+    white-space: normal;   
+    word-wrap: break-word;
+} 
+   
+.carousel-container {
+    overflow: hidden;
+    width: 100%; 
+    padding: 0 5px;
+  }
+  
+  .carousel {
+    display: flex; 
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .reviews-image {
+    width: 500px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+    
+  .dot.active {
+    background-color:#32404D;
+  }
 
 
+.footer{
+    background-color: #32404d;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); 
+    padding: 40px;
+    
+    
+}
+.footer-section ul li a {
+color: #fff;
+}
+
+.footer-section ul li {
+    display: flex;
+    gap: 10px;
+  }
+.footer-section h3 {
+    position: relative;
+    left: 40px;
+}
 
   @media (min-width: 921px)and  (max-width: 1200px){
     .site-name{
@@ -444,7 +599,80 @@ html, body{
         width: 100%;
         height: auto;
     }
+    
+.Manage-flexible-plans{
+
+    grid-template-columns: repeat(1, minmax(290px, 1fr)); 
+
+}
+.footer{
+    grid-template-columns: repeat(2, minmax(250px, 1fr)); 
+        padding: 20px; 
+}
+
+.customer-reviews{
+    display: flex;
+   margin-top: 30%;
+    
+ }
+ .reviews-image {
+    width: 42rem;
+    height: 20rem;
+    margin-bottom: 1rem;
+}
+ 
+.carousel-container {
+    overflow: hidden; 
+    width: 100%; 
+    padding: 0 5px;
+  }
+
+  .carousel {
+    display: flex; 
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .reviews-section {
+    min-width: 90%; /* Each card takes full width of the viewport */
+    box-sizing: border-box;
+    padding: 20px;
+    margin-right: 10px;
+    overflow: hidden;
+    margin: 8px;
+    height: 500px;
+
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .reviews-head-text{
+    font-size: 3rem;
+    margin-top: 0%;
+     
+}
+.learn-more-btn3{
+  
+    left: 27rem;
+    bottom: 100px;
+  
+   
+   
+}
   } 
+
+
   @media  (max-width: 650px){
     #hamburger {
         font-size: 2rem; 
@@ -500,7 +728,76 @@ html, body{
         height: 200vh;
         display: block;
     }
+    .Manage-flexible-plans{
 
+        grid-template-columns: repeat(1, minmax(290px, 1fr)); 
+    
+    }
+    .footer{
+        grid-template-columns: repeat(2, minmax(200px, 1fr)); 
+        padding: 20px; 
+    }
+    
+.customer-reviews{
+    display: flex;
+ }
+ .reviews-image {
+    width: 20rem;
+    height: 14rem;
+    margin-bottom: 1rem;
+}
+ 
+.carousel-container {
+    overflow: hidden; 
+    width: 100%; 
+    padding: 0 5px;
+  }
+
+  .carousel {
+    display: flex; 
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .reviews-section {
+    min-width: 90%; /* Each card takes full width of the viewport */
+    box-sizing: border-box;
+    margin-right: 10px;
+    overflow: hidden;
+    margin: 5px;
+    height: 500px;
+
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .reviews-head-text{
+    font-size: 1.8rem;
+    margin-top: 0%;
+     
+}
+.learn-more-btn3{
+  
+    left: 15rem;
+    bottom: 20%;
+   
+}
+
+.footer{
+  justify-content: center;
+    align-items: center;
+}
   }
 
 
@@ -525,8 +822,6 @@ html, body{
 .whychooseUs-section div h3 {
     font-weight: 400;
     font-size: small;
- 
- 
     
 }
 .whychooseUs-section div h1{
@@ -575,6 +870,79 @@ html, body{
 .intro-txt h1{
     font-size: 1rem;
 }
+.Manage-flexible-plans{
+
+    grid-template-columns: repeat(1, minmax(270px, 1fr)); 
+    padding: 10px;
+
+}
+.Manage-flexible-plans  div h2{
+    font-size: 1.5rem;
+}
+.footer{
+    grid-template-columns: repeat(1, minmax(200px, 1fr)); 
+    padding: 20px; 
+}
+
+.customer-reviews{
+    display: flex;
+ }
+ .reviews-image {
+    width: 12rem;
+    height: 12rem;
+}
+ 
+.carousel-container {
+    overflow: hidden; 
+    width: 100%; 
+    padding: 0 5px;
+  }
+
+  .carousel {
+    display: flex; 
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .reviews-section {
+    min-width: 90%; /* Each card takes full width of the viewport */
+    box-sizing: border-box;
+    margin-right: 10px;
+    overflow: hidden;
+    margin: 8px;
+    height: 400px;
+
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .reviews-head-text{
+    font-size: 1.5rem;
+    margin-top: 0%;
+     
+}
+.learn-more-btn3{
+  
+    left: -8rem;
+    bottom: 30%;
+    font-size: 12px;
+    
+}
+.reviews-section p{
+    font-size: 12px;
+}
 }
 
 
@@ -589,10 +957,10 @@ html, body{
        display: flex;
      
   }
-.text1-header h1{
-    font-size: 1.8rem;
-  
-}
+  .text1-header h1{
+      font-size: 1.8rem;
+    
+  }
   .whychooseUs-section {
     grid-template-columns: repeat(1, minmax(250px, 1fr));
     padding: 10px;
@@ -649,4 +1017,86 @@ html, body{
   .intro-txt h1{
       font-size: 1rem;
   }
+  .Manage-flexible-plans{
+
+    grid-template-columns: repeat(1, minmax(250px, 1fr)); 
+    padding: 10px;
+
+}
+.Manage-flexible-plans  div h2{
+    font-size: 1.5rem;
+}
+.Manage-flexible-plans  div p {
+    font-size: 0.8rem;
+}
+.footer{
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    padding: 20px; 
+}
+
+
+.customer-reviews{
+    display: flex;
+  
+ }
+ .reviews-image {
+    width: 20rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin-bottom: 0rem;
+}
+ 
+.carousel-container {
+    overflow: hidden; 
+    width: 100%; 
+    padding: 0 2px;
+  }
+
+  .carousel {
+    display: flex; 
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .reviews-section {
+    min-width: 90%; /* Each card takes full width of the viewport */
+    box-sizing: border-box;
+    margin-right: 10px;
+    overflow: hidden;
+    margin: 4px;
+    margin-top: 20%;
+    height: 400px;
+
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .reviews-head-text{
+    font-size: 1rem;
+    margin-top: 0%;
+    
+     
+}
+.learn-more-btn3{
+  
+    left: -8rem;
+    bottom: 20%;
+    font-size: 10p;
+  
+} 
+.reviews-section p{
+    font-size: 11px;
+}
+
   }
