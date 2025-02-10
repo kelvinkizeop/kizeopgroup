@@ -96,3 +96,57 @@ document.querySelectorAll(".sidebar-dropdown").forEach(item => {
     });
 });
 
+//reviews toggle
+const carousel = document.querySelector(".carousel");
+const dots = document.querySelectorAll(".dot");
+
+let currentIndex = 0;
+
+// Update carousel and active dot
+function updateCarousel(index) {
+  const cardWidth = carousel.querySelector(".reviews-section").offsetWidth;
+  carousel.style.transform = `translateX(-${index * cardWidth}px)`;
+
+  dots.forEach((dot, idx) => {
+    dot.classList.toggle("active", idx === index);
+  });
+}
+
+// Add event listeners to dots
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentIndex = index;
+      updateCarousel(currentIndex);
+    });
+  });
+  
+// Swipe functionality for touch devices
+let startX = 0;
+
+carousel.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+carousel.addEventListener("touchend", (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const diff = endX - startX;
+
+  if (diff > 50 && currentIndex > 0) {
+    currentIndex--; // Swipe right
+  } else if (diff < -50 && currentIndex < dots.length - 1) {
+    currentIndex++; // Swipe left
+  }
+
+  updateCarousel(currentIndex);
+});
+// Automatic carousel cycling every 3 seconds (3000ms)
+setInterval(() => {
+    if (currentIndex < dots.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    updateCarousel(currentIndex);
+  }, 3000);
+  
+
