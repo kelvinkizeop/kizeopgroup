@@ -418,32 +418,19 @@ body {
 
 .reviews-head-text{
     display: flex;
-    position: absolute;
-    left: 10rem;
-    font-size: 4rem;
-     
-}
-.learn-more-btn3{
-    display: flex;
-    position: absolute;
-    left: 30rem;
-    font-size: 1.5rem;
-    bottom: 40px;
-    display: inline-block;
-    background-color:#32404D;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 50px;
+    padding-left: 20%;
+    font-size: 3rem;
+    margin: 0px;
+    margin-bottom: -8rem;
+    background-color: #b2c1cf;
     color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    
-   
+  
 }
+
 .customer-reviews {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin: 20px 0;
-    margin-top: 10%;
 }
 
 
@@ -458,6 +445,7 @@ body {
     width: 100%; 
     white-space: normal;   
     word-wrap: break-word;
+    
 } 
    
 .carousel-container {
@@ -504,7 +492,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr)); 
     padding: 40px;
-    
+    margin-top: 10%;
     
 }
 .footer-section ul li a {
@@ -527,19 +515,14 @@ color: #fff;
        
     }
     .logo{
-        width: 5rem;
-        height: 5rem; 
+        width: 4rem;
+        height: 4rem; 
     }
     #google_translate_element{
         margin-left: 2rem;
-        padding: 10px;
-        margin: 10px;
-        position: absolute;
-        right: 1rem;
     }
     .menu {
-        position: absolute;
-        top: 2.5em;
+        display: none;
        
 
     }
@@ -553,6 +536,22 @@ color: #fff;
         height: 200vh;
         display: block;
     }
+    .reviews-head-text{
+        font-size: 2rem;
+        margin-top: 0%;
+        padding-left: 8%;
+         
+    }
+    #hamburger{
+        bottom: -1.5rem; 
+        right: 1rem;
+        font-size: 3rem;
+        display: flex;
+        top: 0.1rem;
+       
+    }
+ 
+
   }
 
   @media (max-width: 910px) {
@@ -658,8 +657,9 @@ color: #fff;
     transition: background-color 0.3s;
   }
   .reviews-head-text{
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 0%;
+    padding-left: 8%;
      
 }
 .learn-more-btn3{
@@ -783,8 +783,9 @@ color: #fff;
     transition: background-color 0.3s;
   }
   .reviews-head-text{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-top: 0%;
+    padding-left: 8%;
      
 }
 .learn-more-btn3{
@@ -929,8 +930,10 @@ color: #fff;
   }
 
   .reviews-head-text{
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-top: 0%;
+    padding-left: 8%;
+    margin-bottom: -6rem;
      
 }
 .learn-more-btn3{
@@ -1032,11 +1035,13 @@ color: #fff;
 .footer{
     grid-template-columns: repeat(1, minmax(200px, 1fr));
     padding: 20px; 
+    margin-top: 50%;
 }
 
 
 .customer-reviews{
     display: flex;
+    
   
  }
  .reviews-image {
@@ -1085,6 +1090,7 @@ color: #fff;
   .reviews-head-text{
     font-size: 1rem;
     margin-top: 0%;
+    padding-left: 10%;
     
      
 }
@@ -1098,5 +1104,6 @@ color: #fff;
 .reviews-section p{
     font-size: 11px;
 }
+
 
   }
