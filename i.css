@@ -691,6 +691,9 @@ color: #fff;
    
    
 }
+.whychooseUs-section div:nth-child(10){
+    left: 0%;
+  }
   } 
 
 
@@ -820,6 +823,9 @@ color: #fff;
   justify-content: center;
     align-items: center;
 }
+.whychooseUs-section div:nth-child(10){
+    left: 0%;
+  }
   }
 
 
@@ -968,6 +974,9 @@ color: #fff;
 .reviews-section p{
     font-size: 12px;
 }
+.whychooseUs-section div:nth-child(10){
+   left: 0%;
+ }
 }
 
 
