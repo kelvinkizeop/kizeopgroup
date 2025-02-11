@@ -60,6 +60,10 @@ body {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
+.menu-icon {
+    width: 30px; 
+    height: 30px;
+}
 
 .menu {
     position: absolute;
